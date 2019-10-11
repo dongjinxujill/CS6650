@@ -36,7 +36,7 @@ public class Stats {
 
   public void performanceStats() {
     writeToCSV();
-    System.out.println("stats of threads 32:" );
+    System.out.println("stats of threads 1024:" );
     System.out.println("=========================================");
     System.out.println("Total number of requests sent: " + requestCount);
     System.out.println("Total number of successful responses: " + responseCount);
@@ -56,7 +56,7 @@ public class Stats {
     Collections.sort(latency);
     latencyStats[0] = latencySum / latency.size();
     latencyStats[1] = latency.get(latency.size()/2-1);
-    latencyStats[2] = requestCount/wallTime;
+    latencyStats[2] = requestCount/ wallTime;
     latencyStats[3] = latency.get(latency.size()*99/100-1);
     latencyStats[4] = latency.get(latency.size()-1);
 
@@ -67,7 +67,7 @@ public class Stats {
     try {
       BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(
           new FileOutputStream(
-              "/Users/TOKYO/Documents/GitHub/assignment1/src/main/java/client/CSVFiles/records_32threads.csv"),
+              "/Users/TOKYO/Documents/GitHub/assignment1/src/main/java/client/part2/CSVFiles/records_1024threads.csv"),
           "UTF-8"));
       for (Record record : records) {
         long currLatency = record.getLatency();

@@ -13,11 +13,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
 public class Client {
-  private static final int NUMTHREADS = 32;
+  private static final int NUMTHREADS = 1024;
   private static final int NUMSKIERS = 20000;
   private static final int NUMLIFTS = 40;
   private static final int NUMRUNS = 20;
-  private static final int DEFAULTTHREADMAXCAPACITY = 400;
+  private static final int DEFAULTTHREADMAXCAPACITY = 4000;
   private static final int DEFAULTPOSTMAXCAPACITY = 400000;
   private static final int DIVIDEND = 10;
   private static final int TIMEOUT = 30;
